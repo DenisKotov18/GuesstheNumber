@@ -6,15 +6,15 @@ int main()
 {
 	setlocale(LC_ALL, "RUSSIAN");
 	int a;
-	cout << "Ââåäè ìèíèìàëüíîå ÷èñëî" << endl;
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸ Ğ¼Ğ¸Ğ½Ğ¸Ğ¼Ğ°Ğ»ÑŒĞ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾" << endl;
 	cin >> a;
-	cout << "Ââåäè ìàêñèìàëüíîå ÷èñëî" << endl;
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸ Ğ¼Ğ°ĞºÑĞ¸Ğ¼Ğ°Ğ»ÑŒĞ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾" << endl;
 	int b;
 	cin >> b;
 	srand(time(NULL));
 	int number_hide;
 	number_hide = rand() % (b - a + 1) + a;
-	cout << " ßêóáîâè÷, êğóòèòå áàğàáàí" << endl << "×èñëî çàãàäíî!" << endl << " ÈÃĞÀ ÍÀ×ÈÍÀÅÒÑß!" << endl;
+	cout << " Ğ¯ĞºÑƒĞ±Ğ¾Ğ²Ğ¸Ñ‡, ĞºÑ€ÑƒÑ‚Ğ¸Ñ‚Ğµ Ğ±Ğ°Ñ€Ğ°Ğ±Ğ°Ğ½" << endl << "Ğ§Ğ¸ÑĞ»Ğ¾ Ğ·Ğ°Ğ³Ğ°Ğ´Ğ½Ğ¾!" << endl << " Ğ˜Ğ“Ğ Ğ ĞĞĞ§Ğ˜ĞĞĞ•Ğ¢Ğ¡Ğ¯!" << endl;
 	int number = 0;
 	int gl;
 	gl = 0;
@@ -23,15 +23,15 @@ int main()
 	{
 		if (miss == true)
 		{
-			cout << "Íå âåğíî!" << endl;
-			if (number > number_hide) cout << " Çàãàäàííîå ÷èñëî ìåíüøå âàøåãî." << endl;
-			else cout << " Çàãàäàííîå ÷èñëî áîëüøå âàøåãî." << endl;
+			cout << " ĞĞµ Ğ²ĞµÑ€Ğ½Ğ¾!" << endl;
+			if (number > number_hide) cout << " Ğ—Ğ°Ğ³Ğ°Ğ´Ğ°Ğ½Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾ Ğ¼ĞµĞ½ÑŒÑˆĞµ Ğ²Ğ°ÑˆĞµĞ³Ğ¾." << endl;
+			else cout << "  Ğ—Ğ°Ğ³Ğ°Ğ´Ğ°Ğ½Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾ Ğ±Ğ¾Ğ»ÑŒÑˆĞµ Ğ²Ğ°ÑˆĞµĞ³Ğ¾." << endl;
 		}
 		cin >> number;
 		gl++;
 		miss = true;
 	} while (number != number_hide);
-	cout << "Âû ïîáåäèëè! Ñ " << gl << " ïîïûòêè." << endl;
+	cout << "Ğ’Ñ‹ Ğ¿Ğ¾Ğ±ĞµĞ´Ğ¸Ğ»Ğ¸! Ğ¡ " << gl << " Ğ¿Ğ¾Ğ¿Ñ‹Ñ‚ĞºĞ¸." << endl;
 	int sum = 0;
 	int number_ost = number_hide;
 	do
@@ -39,19 +39,19 @@ int main()
 		sum += number_ost % 10;
 		number_ost /= 10;
 	} while (number_ost != 0);
-	cout << " Ñóììà öèôğ óãàäàííîãî ÷èñëà - "<< sum << endl;
+	cout << "  Ğ¡ÑƒĞ¼Ğ¼Ğ° Ñ†Ğ¸Ñ„Ñ€ ÑƒĞ³Ğ°Ğ´Ğ°Ğ½Ğ½Ğ¾Ğ³Ğ¾ Ñ‡Ğ¸ÑĞ»Ğ° - "<< sum << endl;
 	int factorial = 1;
 	for (int i = 1; i <= number_hide; i++)
 	{
 		factorial *= i;
 	}
-	cout << " Ôàêòîğèàë óãàäàííîãî ÷èñëà - " << factorial << endl;
+	cout << " Ğ¤Ğ°ĞºÑ‚Ğ¾Ñ€Ğ¸Ğ°Ğ» ÑƒĞ³Ğ°Ğ´Ğ°Ğ½Ğ½Ğ¾Ğ³Ğ¾ Ñ‡Ğ¸ÑĞ»Ğ° - " << factorial << endl;
 	bool trigger = false;
 	for (int i = 2; i <= sqrt(number_hide); i++)
 	{
 		if ((number_hide % i) == 0)
 		{
-			cout << " Äåëèòåëè óãàäàííîãî ÷èñëà - ";
+			cout << " Ğ”ĞµĞ»Ğ¸Ñ‚ĞµĞ»Ğ¸ ÑƒĞ³Ğ°Ğ´Ğ°Ğ½Ğ½Ğ¾Ğ³Ğ¾ Ñ‡Ğ¸ÑĞ»Ğ° - ";
 			for (int k = i; k <= (number_hide / 2); k++)
 			{
 				if ((number_hide % k) == 0) cout << k << " ";
@@ -61,5 +61,5 @@ int main()
 			break;
 		}
 	}
-	if (trigger == false) cout << " Óãàäàííîå ÷èñëî - ïğîñòîå";
+	if (trigger == false) cout << " Ğ£Ğ³Ğ°Ğ´Ğ°Ğ½Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾ - Ğ¿Ñ€Ğ¾ÑÑ‚Ğ¾Ğµ";
 }
